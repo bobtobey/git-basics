@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TDD Todo Example</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="copy">
+        <h1>Test-Driven Todo List</h1>
+        <p>
+          This tiny web application was built following a red-green-refactor
+          workflow. Start by running <code>npm test</code> to see the Jest
+          suites that guide the behavior of both the domain logic and the
+          browser rendering.
+        </p>
+        <ol>
+          <li>Write or update a failing test inside <code>__tests__</code>.</li>
+          <li>Make the smallest change in <code>src/</code> to satisfy the test.</li>
+          <li>Refactor with confidence while the suite stays green.</li>
+        </ol>
+      </section>
+
+      <section class="app">
+        <form class="todo-form" data-todo-form>
+          <label class="todo-form__label" for="todo-input">Add a task</label>
+          <div class="todo-form__controls">
+            <input
+              id="todo-input"
+              class="todo-form__input"
+              type="text"
+              placeholder="Describe the next step"
+              data-todo-input
+            />
+            <button class="todo-form__button" type="submit">Add</button>
+          </div>
+        </form>
+
+        <ul class="todo-list" data-todo-list aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <script src="../src/todoList.js"></script>
+    <script src="../src/setupTodoApp.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
